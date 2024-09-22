@@ -11,6 +11,8 @@
 
 //}
 //deposit()
+
+// writing a function to find the initial deposit for the slot machine
 const prompt = require("prompt-sync")();
 
 const deposit=()=>{
@@ -28,3 +30,33 @@ const deposit=()=>{
 deposit();
 const depositAmount = deposit();
 console.log(depositAmount);
+
+// writing a function to determine the number of lines a gambler wants to bet on. //
+const getNumberofLines = ()=>{
+    const numberOfLines = prompt("Enter the number of lines you want to bet on(1-4): ")
+    const NumberOfLines = parseFloat(numberOfLines);
+    if (isNaN(numberOfLines)||numberOfLines <=0 || numberOfLines > 3) {
+        console.log("invalid number of lines,try again.")
+}else{
+    return numberOfLines;
+}
+
+    }
+const numberOfLines = getNumberofLines();
+
+// collect the bet amount
+const getBetAmount = (balance) =>{
+    while(true){
+        const betAmount = prompt("Enter the bet per line: ");
+        const numberBet = parseFloat(bet);
+        if (isNaN(numberBet)||numberBet <= 0 || numberBet > balance / lines){
+            console.log("Invalid bet, try again later");
+        }else{
+            return numberBet;
+        }
+
+    }
+}
+
+let balance = deposit();
+const betAmount = getBetAmount(balance);
