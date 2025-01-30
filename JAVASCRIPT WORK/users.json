@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Tendo",
+    "email": "manu12@gmail.com",
+    "password": "$2b$10$idJTUIUZtjO6HD.G.m8Sress74h7d49E8Q/bdh0X2bfcJqmlSb0.u"
+  },
+  {
+    "name": "emma",
+    "email": "emma@gmail.com",
+    "password": "$2b$10$vO1INY50BnZrRl/2Wmomyemi00V3oIEPinRnt7RbIgiCLa400p18G"
+  },
+  {
+    "name": "exit",
+    "email": "exit@gmail.com",
+    "password": "$2b$10$1hbrsOl40dsJfWr85vBQf.0bZfHffjh.LX87..o9YAiAakGOWbRHK"
+  },
+  {
+    "name": "calvin",
+    "email": "tendo@gmail.com",
+    "password": "$2b$10$k.yO6QZZPCKSeXxVjfr98uZXVPve2KPzyjNrRpc2f4awQ2uElLjyS"
+  }
+]
