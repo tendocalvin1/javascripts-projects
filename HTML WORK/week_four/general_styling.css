@@ -1,0 +1,49 @@
+/* Universal Selector*/
+*{
+    color: blueviolet;
+}
+
+
+/* Element Selector*/
+    h2{
+
+    color:green;
+    font-size: 40px;
+}
+
+ul{
+    font-size: 15px;
+}
+
+li{
+    color:brown;
+    font-size: 20px;
+}
+
+table{
+    color: red;
+}
+
+body{
+    border: 2px solid black;
+    padding: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* class selectors*/
+.buttons{
+    color: aquamarine;
+    background-color: black;
+}
+
+/* ID selectors*/
+#main-title{
+   color: greenyellow; 
+}
+
+/*Grouping Selector */
+h1,h2,h3{
+    background-color: azure;
+}
+
+
