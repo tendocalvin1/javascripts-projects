@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Data Fetching Methods</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            line-height: 1.6; 
+        }
+        .data-container {
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>JSON Data Fetching Demonstration</h1>
+    
+    <div id="callback-data" class="data-container">
+        <h2>Callback Method</h2>
+        <pre id="callback-output"></pre>
+    </div>
+    
+    <div id="promise-data" class="data-container">
+        <h2>Promise Method</h2>
+        <pre id="promise-output"></pre>
+    </div>
+    
+    <div id="async-data" class="data-container">
+        <h2>Async/Await Method</h2>
+        <pre id="async-output"></pre>
+    </div>
+
+    <script>
+        // Sample JSON data
+        const sampleData = {
+            "fear": "quiet",
+            "chest": -1477429467,
+            "how": false,
+            "graph": false,
+            "camp": 929234312,
+            "plural": "settle",
+            "type": "module"
+        };
+
+        // Callback Method
+        function fetchDataWithCallback(callback) {
+            setTimeout(() => {
+                if (sampleData) {
+                    callback(null, sampleData);
+                } else {
+                    callback(new Error('Data fetch failed'));
+                }
+            }, 100);
+        }
+
+        fetchDataWithCallback((error, data) => {
+            const outputElement = document.getElementById('callback-output');
+            if (error) {
+                outputElement.classList.add('error');
+                outputElement.textContent = `Error: ${error.message}`;
+            } else {
+                outputElement.textContent = JSON.stringify(data, null, 2);
+            }
+        });
+
+        // Promise Method
+        function fetchDataWithPromise() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (sampleData) {
+                        resolve(sampleData);
+                    } else {
+                        reject(new Error('Data fetch failed'));
+                    }
+                }, 200);
+            });
+        }
+
+        fetchDataWithPromise()
+            .then(data => {
+                const outputElement = document.getElementById('promise-output');
+                outputElement.textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                const outputElement = document.getElementById('promise-output');
+                outputElement.classList.add('error');
+                outputElement.textContent = `Error: ${error.message}`;
+            });
+
+        // Async/Await Method
+        async function fetchDataWithAsyncAwait() {
+            try {
+                await new Promise(resolve => setTimeout(resolve, 300));
+                
+                if (sampleData) {
+                    const outputElement = document.getElementById('async-output');
+                    outputElement.textContent = JSON.stringify(sampleData, null, 2);
+                    return sampleData;
+                } else {
+                    throw new Error('Data fetch failed');
+                }
+            } catch (error) {
+                const outputElement = document.getElementById('async-output');
+                outputElement.classList.add('error');
+                outputElement.textContent = `Error: ${error.message}`;
+                throw error;
+            }
+        }
+
+        fetchDataWithAsyncAwait();
+    </script>
+</body>
+</html>
