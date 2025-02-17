@@ -164,3 +164,4 @@
 // Use Promise.all() for parallel execution when waiting for multiple asynchronous tasks.
 
 
+// The await function also functions or performs as the promise function. //
