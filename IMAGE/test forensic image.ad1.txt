@@ -1,0 +1,30 @@
+﻿Created By Exterro® FTK® Imager 4.7.3.81 
+
+Case Information: 
+Acquired using: ADI4.7.3.81
+Case Number: 01
+Evidence Number: 011
+Unique Description: first trial
+Examiner: Tendo
+Notes: CyberSecurity
+
+--------------------------------------------------------------
+
+Information for C:\Users\Administrator\Desktop\IMAGE\test forensic image.ad1:
+[Computed Hashes]
+ MD5 checksum:    e7b1cef3a26bc759c9bb1a1a2f9b1f2f
+ SHA1 checksum:   c67049fc5ed70d41fa2cb9fc105002b100056d9b
+
+Image information:
+ Acquisition started:   Wed Feb 19 16:46:16 2025
+ Acquisition finished:  Wed Feb 19 16:46:16 2025
+ Segment list:
+  C:\Users\Administrator\Desktop\IMAGE\test forensic image.ad1
+ COMPUTED HASH :  e7b1cef3a26bc759c9bb1a1a2f9b1f2f
+ COMPUTED HASH :  c67049fc5ed70d41fa2cb9fc105002b100056d9b
+
+Image Verification Results:
+ Verification started:  Wed Feb 19 16:46:16 2025
+ Verification finished: Wed Feb 19 16:46:16 2025
+ MD5 checksum:    e7b1cef3a26bc759c9bb1a1a2f9b1f2f : verified
+ SHA1 checksum:   c67049fc5ed70d41fa2cb9fc105002b100056d9b : verified
