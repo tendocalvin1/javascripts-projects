@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Application</title>
+    <link rel="stylesheet" href="./styles/general_style.css">
+</head>
+<body onload="greet()">
+    <button onclick="alert('Hello Tendo')">Click Me</button>
+    <p id="text">This is the first HTML, CSS and Javascript</p>
+    <button id="changeTextBtn" onclick="toggleText()">Change Text</button>
+    <button id="click">Internal Javascript Click</button>
+    
+    <!-- New Text Field and Button for Changing Background Color -->
+    <input type="text" id="colorInput" placeholder="Enter a color">
+    <button onclick="changeBackgroundColorFromInput()">Change Background Color</button>
+
+    <!-- Existing Buttons for Changing Background Color -->
+    <button onclick="changeBackgroundColor('lightblue')">Light Blue</button>
+    <button onclick="changeBackgroundColor('lightgreen')">Light Green</button>
+    <button onclick="changeBackgroundColor('lightpink')">Light Pink</button>
+    <button onclick="resetBackgroundColor()">Reset</button>
+    
+    <script>
+        // Uncomment this function if you want the greeting alert on page load
+        // function greet(){
+        //     alert("Welcome to the Dynamic World!");
+        // }
+        
+        const buttonId = document.getElementById('click');
+        buttonId.onclick = function(){
+            alert("Button was clicked!")
+        }
+
+        buttonId.onmouseover = function(){
+            buttonId.style.color ='yellow';
+        }
+
+        buttonId.onmouseout = function(){
+            buttonId.style.color ='red';
+        }
+
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        function changeBackgroundColorFromInput() {
+            const color = document.getElementById('colorInput').value || '#ffffff'; // Default to white if input is empty
+            if (isValidColor(color)) {
+                changeBackgroundColor(color);
+            } else {
+                alert('Invalid color! Please enter a valid color name or hex code.');
+            }
+        }
+
+        function isValidColor(strColor) {
+            const s = new Option().style;
+            s.color = strColor;
+            return s.color !== '';
+        }
+        
+        function resetBackgroundColor() {
+            document.body.style.backgroundColor = 'white';
+        }
+
+        function toggleText() {
+            const textElement = document.getElementById('text');
+            if (textElement.innerHTML === 'This is the first HTML, CSS and Javascript') {
+                textElement.innerHTML = 'I am testing inline Javascript.';
+            } else {
+                textElement.innerHTML = 'This is the first HTML, CSS and Javascript';
+            }
+        }
+    </script>
+</body>
+</html>
